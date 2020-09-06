@@ -1,3 +1,3 @@
-# MAProc
-# MADic.txt : Moroccan Arabic Dialect dictionary 
-# MANormRef.txt : Normalization dictionary reference serves for validation.
+# MANorm
+<br> MADic.txt : Moroccan Arabic Dialect dictionary. 
+<br> MANormRef.txt : Normalization dictionary reference serves for validation.
