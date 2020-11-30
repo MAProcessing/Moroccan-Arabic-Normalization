@@ -112,7 +112,7 @@ def MaNorm_generation(document):
 
 # Create MANorm Dictionary 
 
-filename = "MA_Normalization/list_ma" # dictionary of MA canonical words form.
+filename = "MA_Normalization/MADic" # dictionary of MA canonical words form.
 nbOfSimWords = 20 # the number of the most similar words extracted 
 document = open(filename+'.txt', 'r', encoding='utf8').readlines()
 
