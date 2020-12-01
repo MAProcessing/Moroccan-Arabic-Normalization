@@ -28,11 +28,11 @@ def removeVowels(str_input):
     return str_out
 
 # Function to remove repeated characters more than twice in a string
-def remove_repeat_char(word):
+def remove_repeat_char(str_input):
     regex = r"(.)\1{1,}"
     subst = "\\1"
-    result = re.sub(regex, subst, word, 0, re.MULTILINE)
-    return result
+    str_out = re.sub(regex, subst, str_input, 0, re.MULTILINE)
+    return str_out
 
 # Function to measure the lexical similarty between two strings
 def lexsim(val1, val2):
