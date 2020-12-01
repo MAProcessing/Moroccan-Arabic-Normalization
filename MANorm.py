@@ -112,22 +112,22 @@ def MaNorm_generation(document):
 
 # Create MANorm Dictionary 
 
-filename = "MA_Normalization/MADic" # dictionary of MA canonical words form.
+filename = "MADic" # dictionary of MA canonical words form.
 nbOfSimWords = 20 # the number of the most similar words extracted 
 document = open(filename+'.txt', 'r', encoding='utf8').readlines()
 
 # get the word embedding models and generate normalization dictionaries
-model = gm.Word2Vec.load('MA_Normalization/ma_model_Fastext')
+model = gm.Word2Vec.load('MA_Model/ma_model_Fastext')
 resfile = open(filename + "_manorm_dictionary_fastext.txt", "w", encoding="utf-8")
 resfile.write(Normdic_generation(document))
 resfile.close()
 
-model = gm.Word2Vec.load('MA_Normalization/ma_model_skip_gram')
+model = gm.Word2Vec.load('MA_Model/ma_model_skip_gram')
 resfile = open(filename + "_manorm_dictionary_skipgram.txt", "w", encoding="utf-8")
 resfile.write(Normdic_generation(document))
 resfile.close()
 
-model = gm.Word2Vec.load('MA_Normalization/ma_model_cbow')
+model = gm.Word2Vec.load('MA_Model/ma_model_cbow')
 resfile = open(filename + "_manorm_dictionary_cbow.txt", "w", encoding="utf-8")
 resfile.write(Normdic_generation(document))
 resfile.close()
