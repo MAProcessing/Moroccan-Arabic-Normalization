@@ -27,14 +27,14 @@ def removeVowels(str_input):
     str_out = first_letter + "".join(ret)
     return str_out
 
-# Function to remove repeated characters in a string
+# Function to remove repeated characters more than twice in a string
 def remove_repeat_char(word):
     regex = r"(.)\1{1,}"
     subst = "\\1"
     result = re.sub(regex, subst, word, 0, re.MULTILINE)
     return result
 
-#Function to measure the lexical similarty between two strings
+# Function to measure the lexical similarty between two strings
 def lexsim(val1, val2):
     lcs = pylcs.lcs(val1, val2) # the longest common subsequence LCS
     lcsr = lcs/max(len(val1),len(val2)) # the longest common subsequence ratio LCSR
@@ -112,22 +112,22 @@ def MaNorm_generation(document):
 
 # Create MANorm Dictionary 
 
-filename = "MADic" # dictionary of MA canonical words form.
+filename = "MADic" # the dictionary of MA canonical words form.
 nbOfSimWords = 20 # the number of the most similar words extracted 
 document = open(filename+'.txt', 'r', encoding='utf8').readlines()
 
 # get the word embedding models and generate normalization dictionaries
 model = gm.Word2Vec.load('MA_Model/ma_model_Fastext')
 resfile = open(filename + "_manorm_dictionary_fastext.txt", "w", encoding="utf-8")
-resfile.write(Normdic_generation(document))
+resfile.write(MaNorm_generation(document))
 resfile.close()
 
 model = gm.Word2Vec.load('MA_Model/ma_model_skip_gram')
 resfile = open(filename + "_manorm_dictionary_skipgram.txt", "w", encoding="utf-8")
-resfile.write(Normdic_generation(document))
+resfile.write(MaNorm_generation(document))
 resfile.close()
 
 model = gm.Word2Vec.load('MA_Model/ma_model_cbow')
 resfile = open(filename + "_manorm_dictionary_cbow.txt", "w", encoding="utf-8")
-resfile.write(Normdic_generation(document))
+resfile.write(MaNorm_generation(document))
 resfile.close()
