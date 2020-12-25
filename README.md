@@ -6,7 +6,7 @@
 # CITATION
 Please cite the following paper if using these materials:
 
-   '
+   ```
    @inproceedings{zarnoufi-etal-2020-manorm,
     <br>title = "{MAN}orm: A Normalization Dictionary for {M}oroccan {A}rabic Dialect Written in {L}atin Script",
     <br>author = "Zarnoufi, Randa  and
@@ -21,6 +21,4 @@ Please cite the following paper if using these materials:
     <br>url = "https://www.aclweb.org/anthology/2020.wanlp-1.14",
     <br>pages = "155--166",
 }
-   '
-</div>
-<div class="bg-gray">
+   ```
